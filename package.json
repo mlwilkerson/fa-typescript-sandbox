@@ -4,6 +4,11 @@
   "main": "index.js",
   "author": "Mike Wilkerson <mwilkerson@gmail.com>",
   "license": "MIT",
+  "scripts":{
+    "build":"./build.sh",
+    "clean":"rm index.js; rm bundle.js",
+    "start":"if [ -e bundle.js ]; then node bundle.js; else echo 'run \"build\" first'; fi"
+  },
   "devDependencies": {
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-node-resolve": "^3.0.0"
